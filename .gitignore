@@ -5,6 +5,7 @@
 *.nc
 reordered_cpouts*
 *.cpout
+*.mdout
 
 ### JupyterNotebooks ###
 # gitignore template for Jupyter Notebooks
