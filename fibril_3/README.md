@@ -6,7 +6,7 @@ The system is used to investigate **pH-dependent stabilizing interactions within
 
 ### Protonation states
 
-Constant protonation states were assigned for the following titratable residues:
+Variable protonation states were assigned for the following titratable residues:
 
 - **HIP** – protonated histidine
 - **AS4** – protonated aspartic acid

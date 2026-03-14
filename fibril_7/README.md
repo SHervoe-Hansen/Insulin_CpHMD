@@ -1,6 +1,6 @@
-# Fibril simulation: truncated insulin fibril (1-mer)
+# Fibril simulation: truncated insulin fibril (7-mer)
 
-This directory contains molecular dynamics simulations of a **truncated insulin fibril consisting of a single fibril segment (1-mer)**. The fibril fragment is **capped at the termini** to avoid artificial end effects caused by truncation of the protofilament.
+This directory contains molecular dynamics simulations of a **truncated insulin fibril consisting of seven fibril segments (7-mer)**. The fibril fragment is **capped at the termini** to avoid artificial end effects caused by truncation of the protofilament.
 
 The system is used to investigate **pH-dependent stabilizing interactions within fibrillar insulin structures**.
 
@@ -9,10 +9,7 @@ The system is used to investigate **pH-dependent stabilizing interactions within
 Variable protonation states were assigned for the following titratable residues:
 
 - **HIP** – protonated histidine
-- **AS4** – protonated aspartic acid
 - **GL4** – protonated glutamic acid
-- **LYS** – lysine
-- **TYR** – tyrosine
 
 These residues were selected for titration analysis in order to study the effect of pH on fibril stability.
 

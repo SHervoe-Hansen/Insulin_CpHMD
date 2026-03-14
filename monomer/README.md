@@ -9,7 +9,7 @@ The simulations are part of a study investigating **pH-dependent stabilizing for
 
 ### Protonation states
 
-Constant protonation states were assigned for the following titratable residues:
+Variable protonation states were assigned for the following titratable residues:
 
 - **HIP** – protonated histidine
 - **AS4** – protonated aspartic acid
