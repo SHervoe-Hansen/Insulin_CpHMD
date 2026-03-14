@@ -1,0 +1,38 @@
+Explicit solvent initial heating
+Gradual temperature ramp: 10 K to 298.15 K over 400 ps
+NVT ensemble with Langevin thermostat (velocity reassignment at start)
+
+&cntrl
+   imin=0,                     ! Run molecular dynamics 
+   irest=0,                    ! Fresh MD start (not a restart)
+   ntx=1,                      ! Read only coordinates (no velocities)
+
+   nstlim=200000,              ! Total number of MD steps (200,000 x 0.002 ps = 400 ps)
+   dt=0.002,                   ! Time step (2 fs)
+
+   ntt=3,                      ! Langevin thermostat
+   gamma_ln=2.0,               ! Collision frequency for thermostat (2 ps^-1)
+   ig=-1,                      ! Use random seed for assigning velocities
+
+   ntb=1,                      ! Constant volume periodic boundary conditions (NVT ensemble)
+   ntp=0,                      ! No pressure coupling (implicit when ntb=1)
+
+   ntc=2, ntf=2,               ! SHAKE on bonds involving hydrogen; do not calculate those forces
+
+   cut=10.0,                   ! Nonbonded interaction cutoff
+
+   ntpr=1000,                  ! Print energy info every 1000 steps (2 ps)
+   ntwx=1000,                  ! Write coordinates to trajectory every 1000 steps
+   ioutfm=1,                   ! NetCDF trajectory format
+
+   iwrap=0,                    ! Do NOT wrap coordinates during heating
+   nmropt=1,                   ! Enable temperature ramp via NMR-style weight changes
+/
+
+&wt
+   TYPE='TEMP0',               ! Linear temperature ramp specification
+   ISTEP1=0, ISTEP2=150000,    ! From step 0 to step 150000 (first 300 ps of heating)
+   VALUE1=10.0, VALUE2=298.15, ! Start temp = 10 K -> End temp = 298.15 K
+/
+&wt TYPE='END' /               ! End of weight change control block
+
