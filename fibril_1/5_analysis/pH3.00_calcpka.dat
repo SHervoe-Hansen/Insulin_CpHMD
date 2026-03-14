@@ -1,0 +1,12 @@
+Solvent pH is    3.000
+TYR 11  : Offset  6.079  Pred  9.079  Frac Prot 1.000 Transitions         2
+GL4 14  : Offset  2.526  Pred  5.526  Frac Prot 0.997 Transitions      6227
+TYR 16  : Offset    inf  Pred    inf  Frac Prot 1.000 Transitions         0
+HIP 20  : Offset  2.977  Pred  5.977  Frac Prot 0.999 Transitions      1526
+HIP 25  : Offset  3.778  Pred  6.778  Frac Prot 1.000 Transitions       232
+GL4 28  : Offset  2.300  Pred  5.300  Frac Prot 0.995 Transitions      9624
+TYR 31  : Offset    inf  Pred    inf  Frac Prot 1.000 Transitions         0
+GL4 36  : Offset  2.148  Pred  5.148  Frac Prot 0.993 Transitions     14651
+TYR 41  : Offset    inf  Pred    inf  Frac Prot 1.000 Transitions         0
+
+Average total molecular protonation:  10.984
