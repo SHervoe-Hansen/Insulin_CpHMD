@@ -1,8 +1,10 @@
 # Created by https://www.toptal.com/developers/gitignore/api/linux,macos,python,windows,pycharm,jupyternotebooks,visualstudiocode,visualstudio
 # Edit at https://www.toptal.com/developers/gitignore?templates=linux,macos,python,windows,pycharm,jupyternotebooks,visualstudiocode,visualstudio
-## Trajectory files ##
-*.nc
 
+## Specific simulation files ##
+*.nc
+reordered_cpouts*
+*.cpout
 
 ### JupyterNotebooks ###
 # gitignore template for Jupyter Notebooks
