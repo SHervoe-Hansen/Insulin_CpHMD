@@ -1,0 +1,17 @@
+# Protein setup
+source leaprc.constph
+mol = loadPDB insulin.pdb
+bond mol.6.SG mol.11.SG    # intra-chain
+bond mol.7.SG mol.28.SG    # inter-chain
+bond mol.20.SG mol.40.SG   # inter-chain
+
+# Solvent setup
+source leaprc.water.tip3p
+loadAmberParams frcmod.ionsjc_tip3p
+solvateBox mol TIP3PBOX 20.0
+charge mol
+
+# Save files
+saveAmberParm mol insulin.parm7 insulin.rst7
+savePdb mol insulin_leap_output.pdb
+quit
