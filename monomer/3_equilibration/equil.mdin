@@ -1,0 +1,35 @@
+Equilibration (relaxation) mdin for pH-REM, no protonation changes
+Isothermal-Isobaric (NPT) ensemble simulation with Monte Carlo barostat and Langevin thermostat
+
+&cntrl
+   imin=0,                    ! Perform molecular dynamics
+   irest=1,                   ! Restart simulation (use previous velocities and coordinates)
+   ntx=5,                     ! Read coordinates and velocities from NetCDF restart file
+
+   nstlim=100000,             ! Number of MD steps (100,000 x 0.002 ps = 200 ps)
+   dt=0.002,                  ! Time step size in picoseconds (2 fs)
+
+   ntpr=1000,                 ! Print energy info every 1000 steps (2 ps)
+   ntwx=1000,                 ! Write coordinates to trajectory every 1000 steps (2 ps)
+   ioutfm=1,                  ! NetCDF format for output trajectory (compact and efficient)
+
+   ntb=2,                     ! Constant pressure periodic boundary conditions
+   ntp=1,                     ! Constant pressure with isotropic volume scaling
+   barostat=2,                ! Use Monte Carlo barostat for pressure coupling
+   pres0=1.0,                 ! Target pressure in atm
+   taup=1.0,                  ! Pressure relaxation time (ps), typical values ~1.0
+
+   ntt=3,                     ! Langevin thermostat
+   gamma_ln=2.0,              ! Collision frequency for Langevin thermostat (2 ps^-1)
+   tempi=298.15,              ! Initial temperature
+   temp0=298.15,              ! Target temperature
+   ig=-1,                     ! Random seed for thermostat
+
+   ntc=2,                     ! SHAKE constraints on bonds involving hydrogen
+   ntf=2,                     ! Do not calculate forces for bonds constrained by SHAKE
+
+   cut=10.0,                  ! Nonbonded cutoff distance (Angstroms)
+
+   iwrap=0                    ! Disable coordinate wrapping during equilibration
+/
+

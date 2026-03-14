@@ -17,7 +17,7 @@ Constant protonation states were assigned for the following titratable residues:
 - **LYS** – lysine
 - **TYR** – tyrosine
 
-These residues were selected for titration analysis in order to study the effect of pH [>64;2500;0c]10;rgb:c7f1/c7f1/c7f1\]11;rgb:0000/0000/0000\on the stability of the insulin monomer.
+These residues were selected for titration analysis in order to study the effect of pH on the stability of the insulin monomer.
 
 ---
 
