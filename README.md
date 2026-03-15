@@ -1,4 +1,5 @@
-[![CC BY 4.0][cc-by-shield]][cc-by]
+[![License: BSD 3-Clause](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)
+
 # Electronic notebook: Characterization of the pH-Dependent Stabilizing Forces of Insulin's Native and Fibril States
 
 This repository contains supporting information for the scientific manuscript by 
@@ -47,11 +48,10 @@ All figures within the analysis are publication ready and can be reproduced by r
 
 ---
 
-This work is licensed under a  
-[Creative Commons Attribution 4.0 International License][cc-by].
+This project is licensed under the  
+[BSD 3-Clause License][bsd-3-clause].
 
-[![CC BY 4.0][cc-by-image]][cc-by]
+[![License: BSD 3-Clause][bsd-3-clause-shield]][bsd-3-clause]
 
-[cc-by]: http://creativecommons.org/licenses/by/4.0/  
-[cc-by-image]: https://i.creativecommons.org/l/by/4.0/88x31.png  
-[cc-by-shield]: https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg
+[bsd-3-clause]: https://opensource.org/licenses/BSD-3-Clause
+[bsd-3-clause-shield]: https://img.shields.io/badge/License-BSD%203--Clause-blue.svg
