@@ -4,6 +4,7 @@
 ## Specific simulation files ##
 *.nc
 reordered_cpouts*
+!reordered_cpouts*.zst
 *.cpout
 *.mdout
 
