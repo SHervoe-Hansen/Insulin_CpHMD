@@ -3,12 +3,13 @@ parm="../0_preparation/insulin_fibril.explicit.parm7"
 cpin="../0_preparation/insulin_fibril.cpin"
 beginstr="../3_equilibration/insulin_fibril.equil.rst7"
 
+BASE_DIR="$(pwd)"
 Ngpu=4
 Ntasks=$((Ngpu*10))
 
 rm groupfile
 Nrep=0    
-for pH in 0.0 0.5 1.0 1.5 2.0 2.5 3.0 3.5 4.0 4.5 5.0 5.5 6.0 6.5 7.0 7.5 8.0 8.5 
+for pH in 0.0 0.5 1.0 1.5 2.0 2.5 3.0 3.5 4.0 4.5 5.0 5.5 6.0 6.5 7.0 7.5 8.0 8.5 9.0 9.5 10.0 10.5 11.0 11.5 12.0 12.5 13.0 13.5
 do          
 Nrep=`expr $Nrep + 1`
 dir=pH${pH}
@@ -27,21 +28,27 @@ done
 
 cat <<EOF >submit_CpHREMD.sh
 #!/bin/bash
-#PBS -N amber_repex
-#PBS -l nodes=1:ppn=36:nu-g02
-#PBS -o run.out
-#PBS -e run.err
+#------ qsub options --------#
+#PBS -q regular-g
+#PBS -l select=28:mpiprocs=1
+#PBS -l walltime=48:00:00
+#PBS -W group_list=hp260036
+#PBS -j oe
+
+#------- Environment -------#
+cd ${BASE_DIR}
+export OMP_NUM_THREADS=1
 
 source ~/.bashrc
 source ~/.bash_profile
 
-conda activate amberbuild
+module load cuda/12.8
+module load cmake
 
 export AMBERHOME=/data9/stefan/amber24
 source /data9/stefan/amber24/amber.sh
 
-export CUDA_VISIBLE_DEVICES=0,1
-
+#------- Run -------#
 mpiexec -np $Nrep pmemd.cuda.MPI -ng $Nrep -groupfile groupfile -rem 4 -remlog pHremd.log
 
 EOF

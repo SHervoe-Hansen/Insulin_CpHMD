@@ -9,7 +9,10 @@ The system is used to investigate **pH-dependent stabilizing interactions within
 Variable protonation states were assigned for the following titratable residues:
 
 - **HIP** – protonated histidine
+- **AS4** – protonated aspartic acid
 - **GL4** – protonated glutamic acid
+- **LYS** – lysine
+- **TYR** – tyrosine
 
 These residues were selected for titration analysis in order to study the effect of pH on fibril stability.
 

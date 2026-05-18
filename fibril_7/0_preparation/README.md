@@ -49,7 +49,7 @@ tleap -f tleap.in
 Generate the CpHMD protonation input file using `cpinutil.py`:
 
 ```bash
-cpinutil.py -resnames HIP GL4 -p insulin_fibril.parm7 -o insulin_fibril.cpin -op insulin_fibril.explicit.parm7
+cpinutil.py -resnames HIP AS4 GL4 LYS TYR -p insulin_fibril.parm7 -o insulin_fibril.cpin -op insulin_fibril.explicit.parm7
 ```
 
 This command generates the CPIN file required for constant pH simulations.

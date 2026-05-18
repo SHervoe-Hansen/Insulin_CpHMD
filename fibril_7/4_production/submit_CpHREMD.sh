@@ -1,18 +1,24 @@
 #!/bin/bash
-#PBS -N amber_repex
-#PBS -l nodes=1:ppn=36:nu-g02
-#PBS -o run.out
-#PBS -e run.err
+#------ qsub options --------#
+#PBS -q regular-g
+#PBS -l select=28:mpiprocs=1
+#PBS -l walltime=48:00:00
+#PBS -W group_list=hp260036
+#PBS -j oe
+
+#------- Environment -------#
+cd /home/u48000/work/fibril_7/4_production
+export OMP_NUM_THREADS=1
 
 source ~/.bashrc
 source ~/.bash_profile
 
-conda activate amberbuild
+module load cuda/12.8
+module load cmake
 
 export AMBERHOME=/data9/stefan/amber24
 source /data9/stefan/amber24/amber.sh
 
-export CUDA_VISIBLE_DEVICES=0,1
-
-mpiexec -np 18 pmemd.cuda.MPI -ng 18 -groupfile groupfile -rem 4 -remlog pHremd.log
+#------- Run -------#
+mpiexec -np 28 pmemd.cuda.MPI -ng 28 -groupfile groupfile -rem 4 -remlog pHremd.log
 
