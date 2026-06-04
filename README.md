@@ -6,7 +6,8 @@
 This repository contains supporting information, molecular dynamics (MD) simulation data, and analysis scripts accompanying the following scientific manuscripts by *Hervø-Hansen et al.*:
 
 1. **Characterization of the pH-Dependent Stabilizing Forces of Insulin's Native and Fibril States** *ACS Physical Chemistry Au*, 2026 (Accepted).
-2. **pH-Dependent Free Energies of Insulin Fibrillation from Protonation Ensemble Statistics** 2026 (Under preparation / submitted).
+2. **pH-Dependent Free Energies of Insulin Fibrillation from Protonation Ensemble Statistics** 2026 (Pending submission).
+
 *This README will be updated with the journal reference and DOI once available.*
 
 ---
