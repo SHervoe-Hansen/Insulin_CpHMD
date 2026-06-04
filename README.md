@@ -1,58 +1,37 @@
+# Electronic Notebook: pH-Dependent Stability and Thermodynamics of Insulin's Native and Fibril States
+
 [![License: BSD 3-Clause](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19027365.svg)](https://doi.org/10.5281/zenodo.19027365)
 
-# Electronic notebook: Characterization of the pH-Dependent Stabilizing Forces of Insulin's Native and Fibril States
+This repository contains supporting information, molecular dynamics (MD) simulation data, and analysis scripts accompanying the following scientific manuscripts by *Hervø-Hansen et al.*:
 
-This repository contains supporting information for the scientific manuscript by 
-_Hervø-Hansen et al._ 
-
-The manuscript is currently under preparation / submission and will be updated with the journal reference and DOI once available.
-
-All figures within the analysis are publication ready and can be reproduced by running the provided Jupyter notebooks (`.ipynb`). For reproducing the simulations and analysis we recommend cloning the repository locally.
+1. **Characterization of the pH-Dependent Stabilizing Forces of Insulin's Native and Fibril States** *ACS Physical Chemistry Au*, 2026 (Accepted).
+2. **pH-Dependent Free Energies of Insulin Fibrillation from Protonation Ensemble Statistics** 2026 (Under preparation / submitted).
+*This README will be updated with the journal reference and DOI once available.*
 
 ---
 
-## Layout
+## Repository Layout
 
-- `monomer/`  
-  Directory containing simulation data and trajectories for the insulin monomer system.
+### Data Directories
+* `monomer/` — Simulation data and trajectories for the insulin monomer system.
+* `fibril_1/` to `fibril_8/` — Simulation data for insulin fibril fragments ranging from 1-mer to 8-mer lengths.
+* `Figures/` — Publication-ready figures generated during data analysis.
 
-- `fibril_1/`  
-  Simulation data for the insulin fibril **1-mer fragment**.
+### Jupyter Notebooks
+* `Simulations.ipynb` — Detailed workflow describing how the molecular dynamics simulations were prepared, configured, and executed.
+* `Analysis_monomer.ipynb` — Analysis of the insulin monomer simulations.
+* `Analysis_fibril_1mer.ipynb` — Analysis of the fibril 1-mer system.
+* `Analysis_fibril_3mer.ipynb` — Analysis of the fibril 3-mer system.
+* `Analysis_fibril_7mer.ipynb` — Analysis of the fibril 7-mer system.
+* `Analysis_fibrillation_thermodynamics.ipynb` — Thermodynamics analysis evaluating pH-dependent free energies from protonation ensemble statistics.
 
-- `fibril_3/`  
-  Simulation data for the insulin fibril **3-mer fragment**.
-
-- `fibril_7/`  
-  Simulation data for the insulin fibril **7-mer fragment**.
-
-- `Figures/`  
-  Directory containing publication-ready figures generated during the analysis.
-
-- `Analysis_monomer.ipynb`  
-  Jupyter notebook for analyzing simulations of the insulin monomer.
-
-- `Analysis_fibril_1mer.ipynb`  
-  Jupyter notebook for analysis of the fibril 1-mer system.
-
-- `Analysis_fibril_3mer.ipynb`  
-  Jupyter notebook for analysis of the fibril 3-mer system.
-
-- `Analysis_fibril_7mer.ipynb`  
-  Jupyter notebook for analysis of the fibril 7-mer system.
-
-- `Simulations.ipynb`  
-  Jupyter notebook describing how the molecular dynamics simulations were prepared and executed.
-
-- `README`  
-  This file.
+### Miscellaneous
+* `LICENSE` — The text of the BSD 3-Clause License.
+* `README.md` — This file.
 
 ---
 
-This project is licensed under the  
-[BSD 3-Clause License][bsd-3-clause].
+## License
 
-[![License: BSD 3-Clause][bsd-3-clause-shield]][bsd-3-clause]
-
-[bsd-3-clause]: https://opensource.org/licenses/BSD-3-Clause
-[bsd-3-clause-shield]: https://img.shields.io/badge/License-BSD%203--Clause-blue.svg
+This project is licensed under the [BSD 3-Clause License](https://opensource.org/licenses/BSD-3-Clause).
