@@ -1,0 +1,37 @@
+Constant pH REMD input - 300 ns total (0.6 ps/exchange); explicit solvent, NVT ensemble
+
+&cntrl
+   imin=0,                   ! Run molecular dynamics
+   irest=1, ntx=5,           ! Restart from NetCDF restart file (coords + velocities)
+   ntxo=2,                   ! Output coordinates in NetCDF format
+   nstlim=300,               ! 300 steps per exchange = 0.6 ps
+   numexchg=400000,          ! 400,000 exchanges = 240 ns per replica
+   dt=0.002,                 ! 2 fs time step
+
+   ntpr=1000,                ! Print energy info every 1000 steps (2 ps)
+   ntwx=1000,                ! Trajectory output every 1000 steps (2 ps)
+   ntwr=25000,               ! Restart output every 25,000 steps
+   ioutfm=1,                 ! NetCDF format for trajectory
+
+   ntt=3, gamma_ln=2.0,      ! Langevin thermostat with collision frequency 2 ps^-1
+   tempi=298.15,             ! Initial temperature
+   temp0=298.15,             ! Target temperature
+   ig=-1,                    ! Random seed (randomized)
+
+   ntb=1,                    ! Periodic boundaries, constant volume (NVT)
+   ntp=0,                    ! No pressure coupling
+
+   ntc=2, ntf=2,             ! SHAKE bonds involving H
+   cut=10.0,                 ! Nonbonded cutoff distance
+   iwrap=1,                  ! Wrap coordinates into primary box
+
+   icnstph=2,                ! Explicit solvent constant pH MD
+   ntcnstph=100,             ! Attempt protonation change every 100 steps (0.2 ps)
+   ntrelax=100,              ! Relax environment after titration
+   solvph=13.0,                ! Target pH (replace in groupfile)
+   saltcon=0.1               ! Salt concentration (mol/L)
+
+   ntr = 1,                          ! Turn on positional restraints
+   restraint_wt = 10.0,              ! 10 kcal/mol/A**2 restraint force constant
+   restraintmask = '!:WAT&@CA,C,O,N' ! Restraints on the backbone atoms only
+/

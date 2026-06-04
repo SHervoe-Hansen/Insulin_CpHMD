@@ -1,0 +1,21 @@
+# Protein setup
+source leaprc.constph
+mol = loadPDB fibril_A_capped_reordered.pdb 
+
+bond mol.6.SG mol.11.SG  # CYS6 ↔ CYS11, dist = 2.03 Å
+bond mol.7.SG mol.25.SG  # CYS7 ↔ CYS7, dist = 2.03 Å
+bond mol.20.SG mol.37.SG  # CYS20 ↔ CYS19, dist = 2.03 Å
+bond mol.49.SG mol.54.SG  # CYS6 ↔ CYS11, dist = 2.03 Å
+bond mol.50.SG mol.68.SG  # CYS7 ↔ CYS7, dist = 2.03 Å
+bond mol.63.SG mol.80.SG  # CYS20 ↔ CYS19, dist = 2.03 Å
+
+# Solvent setup
+source leaprc.water.tip3p
+loadAmberParams frcmod.ionsjc_tip3p
+solvateBox mol TIP3PBOX 20.0
+charge mol
+
+# Save files
+saveAmberParm mol insulin_fibril.parm7 insulin_fibril.rst7
+savePdb mol insulin_fibril_leap_output.pdb
+quit

@@ -1,0 +1,7 @@
+/var/spool/pbs/mom_priv/jobs/1640177.opbs.SC: line 21: /data9/stefan/amber24/amber.sh: No such file or directory
+
+ Running multipmemd version of pmemd Amber24
+    Total processors =    28
+    Number of groups =    28
+
+=>> PBS: job killed: walltime 172873 exceeded limit 172800

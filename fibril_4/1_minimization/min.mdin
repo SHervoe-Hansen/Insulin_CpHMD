@@ -1,0 +1,11 @@
+Minimization to prepare for constant pH MD
+&cntrl
+   imin = 1,                         ! Turn on minimization
+   ncyc = 5000,
+   maxcyc = 100000,                  ! Total number of minimization cycles
+   ntpr = 100,
+   cut = 10,
+   ntr = 1,                          ! Turn on positional restraints
+   restraint_wt = 10.0,              ! 10 kcal/mol/A**2 restraint force constant
+   restraintmask = '@CA,C,O,N' ! Restraints on the backbone atoms only
+/
