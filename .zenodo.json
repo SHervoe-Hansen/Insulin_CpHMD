@@ -30,6 +30,11 @@
       "scheme": "url",
       "identifier": "https://github.com/SHervoe-Hansen/Insulin_CpHMD", 
       "relation": "isSupplementTo"
+    },
+    {
+      "scheme": "doi",
+      "identifier": "10.1021/acsphyschemau.6c00045",
+      "relation": "isSupplementTo"
     }
   ],
   "license": {
