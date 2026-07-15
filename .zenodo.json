@@ -1,6 +1,6 @@
 {
-  "title": "Electronic notebook: Characterization of the pH-Dependent Stabilizing Forces of Insulin's Native and Fibril States",
-  "description": "This repository contains electronic notebooks (Jupyter) for reproducing the simulation results in the work titled above",
+  "title": "Electronic notebook: pH-Dependent Stability and Thermodynamics of Insulin's Native and Fibril States",
+  "description": "This repository contains simulation inputs and electronic notebooks (Jupyter) related to Insulin's pH-dependent fibril formation",
   "creators": [
     {
       "name": "Stefan Hervø-Hansen",
